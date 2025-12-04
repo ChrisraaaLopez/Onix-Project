@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ONYX - Acceso Biométrico Instantáneo</title>
+
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,600" rel="stylesheet">
+    <link rel="stylesheet" href="dist/css/style.css">
+    <script src="https://unpkg.com/animejs@3.0.1/lib/anime.min.js"></script>
+
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+
+    <style>
+        /* SOLUCIÓN DEFINITIVA PARA LA CTA: ANCHO UNIFORME, CENTRADO Y PADDING */
+        /* 1. Contenedor Principal: Forzamos la alineación de todo el contenido al centro */
+        
+        .cta-inner {
+            text-align: center !important;
+            /* Revertimos el display a la configuración original de la plantilla para no romper el layout de dos columnas,
+           pero aseguramos que los elementos internos de la derecha se centren */
+        }
+        /* 2. Contenedor de Acciones: Forzamos el apilamiento y centrado de los botones/input */
+        
+        .cta-cta {
+            display: flex !important;
+            flex-direction: column !important;
+            /* APILAMIENTO VERTICAL */
+            align-items: center !important;
+            justify-content: center !important;
+            max-width: 300px !important;
+            /* ANCHO MÁXIMO UNIFORME para todos los elementos */
+            width: 100% !important;
+            margin: 20px auto 0 !important;
+            /* Centrado horizontal y separación del texto */
+        }
+        /* 3. Input y Botón Azul: Ocupan 100% del contenedor de 300px */
+        
+        .subscribe-form {
+            display: contents !important;
+            /* Permite que los hijos hereden el layout de .cta-cta */
+        }
+        
+        .cta-cta .form-input,
+        .cta-cta .button-primary {
+            width: 100% !important;
+            /* Miden exactamente 300px */
+            margin-right: 0 !important;
+            margin-left: 0 !important;
+            max-width: none !important;
+        }
+        /* Separación entre el input y el botón principal */
+        
+        .cta-cta .form-input {
+            margin-bottom: 10px !important;
+            /* ESPACIO ENTRE INPUT Y BOTÓN AZUL */
+        }
+        /* 4. BOTÓN GRIS (Descargar Manual): Corrección de Desborde y Ancho Uniforme */
+        
+        .cta-cta .button-secondary {
+            /* Para que midan igual, forzamos el ancho a 100% (igual que el contenedor de 300px) */
+            display: block !important;
+            width: 100% !important;
+            /* AUMENTO DEL PADDING: Soluciona el desborde del texto, ajustando el espacio interno del botón */
+            padding-left: 10px !important;
+            padding-right: 10px !important;
+            /* Separación entre el botón azul y el botón gris */
+            margin-top: 10px !important;
+            margin-bottom: 0 !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+    </style>
+</head>
+
+<body class="is-boxed has-animations">
+
+    <div class="body-wrap">
+
+        <header class="site-header">
+
+            <div class="container">
+
+                <div class="site-header-inner">
+
+                    <div class="brand header-brand">
+
+                        <h1 class="m-0">
+                            <img src="src/images/logo.png" alt="logo" style="height: 40px;">
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+        <main>
+
+            <section class="hero">
+
+                <div class="container">
+
+                    <div class="hero-inner">
+
+                        <div class="hero-copy">
+
+                            <h1 class="hero-title mt-0">Acceso Biométrico Instantáneo. Seguridad Sin Contacto.</h1>
+
+                            <p class="hero-paragraph">**Las Llaves Son Historia.** Cansado de reponer llaves perdidas y compartir códigos vulnerables, ONYX elimina el punto más débil de la seguridad doméstica al usar la única llave imposible de duplicar: **tu rostro**. Zero Fricción.
+                                Zero Riesgo.</p>
+
+                            <div class="hero-cta">
+                                <a class="button button-primary" href="#features-section">Descubre Cómo Funciona</a>
+                                <a class="button" href="#cta-section">Manual de Usuario</a>
+                            </div>
+                        </div>
+
+                        <div class="hero-figure anime-element">
+                            <svg class="placeholder" width="528" height="396" viewBox="0 0 528 396">
+                                <rect width="528" height="396" style="fill:transparent;" />
+                            </svg>
+                            <div class="hero-figure-box hero-figure-box-01" data-rotation="45deg"></div>
+
+                            <div class="hero-figure-box hero-figure-box-02" data-rotation="-45deg"></div>
+
+                            <div class="hero-figure-box hero-figure-box-03" data-rotation="0deg"></div>
+
+                            <div class="hero-figure-box hero-figure-box-04" data-rotation="-135deg"></div>
+
+                            <div class="hero-figure-box hero-figure-box-05"></div>
+
+                            <div class="hero-figure-box hero-figure-box-06"></div>
+
+                            <div class="hero-figure-box hero-figure-box-07"></div>
+
+                            <div class="hero-figure-box hero-figure-box-08" data-rotation="-22deg"></div>
+
+                            <div class="hero-figure-box hero-figure-box-09" data-rotation="-52deg"></div>
+
+                            <div class="hero-figure-box hero-figure-box-10" data-rotation="-50deg"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="features section" id="features-section">
+
+                <div class="container">
+
+                    <div class="features-inner section-inner has-bottom-divider">
+
+                        <div class="section-header text-center">
+
+                            <h2 class="section-title mt-0">La Seguridad Redefinida</h2>
+                        </div>
+
+                        <div class="features-wrap">
+
+                            <div class="feature text-center is-revealing">
+
+                                <div class="feature-inner">
+
+                                    <div class="feature-icon">
+                                        <img src="dist/images/feature-icon-01.svg" alt="Velocidad">                                     </div>
+
+                                    <h4 class="feature-title mt-24">Velocidad Extrema</h4>
+
+                                    <p class="text-sm mb-0">Reconocimiento y acceso en **menos de 1 segundo**. Utilizamos el potente ESP32-CAM y algoritmos optimizados para una identificación infalible y rápida. La fluidez del acceso sin comprometer la seguridad.</p>
+                                </div>
+                            </div>
+
+                            <div class="feature text-center is-revealing">
+
+                                <div class="feature-inner">
+
+                                    <div class="feature-icon">
+                                        <img src="dist/images/feature-icon-02.svg" alt="Privacidad">                                     </div>
+
+                                    <h4 class="feature-title mt-24">Gestión Sin Nube</h4>
+
+                                    <p class="text-sm mb-0">**Máxima Privacidad:** Todos tus datos biométricos están encriptados y se almacenan exclusivamente en la Tarjeta SD local. Operación 24/7 sin internet, a prueba de ataques remotos.</p>
+                                </div>
+                            </div>
+
+                            <div class="feature text-center is-revealing">
+
+                                <div class="feature-inner">
+
+                                    <div class="feature-icon">
+                                        <img src="dist/images/feature-icon-03.svg" alt="Gestión de datos">                                     </div>
+
+                                    <h4 class="feature-title mt-24">Gestión Inteligente de Usuarios</h4>
+
+                                    <p class="text-sm mb-0">El sistema de **"Lista Maestra"** sincroniza automáticamente solo las caras nuevas, optimizando el uso de memoria y garantizando que tu sistema esté siempre actualizado sin duplicados ni errores.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="pricing section">
+
+                <div class="container-sm">
+
+                    <div class="pricing-inner section-inner">
+
+                        <div class="pricing-header text-center">
+
+                            <h2 class="section-title mt-0">Arquitectura Abierta y Viabilidad</h2>
+
+                            <p class="section-paragraph mb-0">Un sistema robusto basado en hardware libre para asegurar máxima funcionalidad y un bajo costo operativo.</p>
+                        </div>
+
+                        <div class="pricing-tables-wrap">
+
+                            <div class="pricing-table">
+
+                                <div class="pricing-table-inner is-revealing">
+
+                                    <div class="pricing-table-main">
+
+                                        <div class="pricing-table-header pb-24">
+
+                                            <div class="h3">Arquitectura ONYX</div>
+                                        </div>
+
+                                        <div class="pricing-table-features-title text-xs pt-24 pb-24">Componentes Clave</div>
+
+                                        <ul class="pricing-table-features list-reset text-sm">
+
+                                            <li>
+                                                <span>**El Cerebro:** ESP32-CAM (Microcontrolador de procesamiento).</span>                                             </li>
+
+                                            <li>
+                                                <span>**Visión:** Cámara de alta resolución para captura biométrica.</span>                                             </li>
+
+                                            <li>
+                                                <span>**Almacenamiento:** Tarjeta MicroSD (Datos encriptados localmente).</span>                                             </li>
+
+                                            <li>
+                                                <span>**Actuador:** Cerradura Solenoide / Mecanismo de pestillo (Vía Módulo de Relé).</span>                                             </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="pricing-table-cta mb-8">
+                                        <a class="button button-secondary button-shadow button-block" href="#">Descargar Lista de Materiales (BOM)</a>                                     </div>
+                                </div>
+                            </div>
+
+                            <div class="pricing-table">
+
+                                <div class="pricing-table-inner is-revealing">
+
+                                    <div class="pricing-table-main">
+
+                                        <div class="pricing-table-header pb-24">
+
+                                            <div class="h3">Viabilidad y Proyección</div>
+                                        </div>
+
+                                        <div class="pricing-table-features-title text-xs pt-24 pb-24">Nuestra Propuesta de Valor</div>
+
+                                        <ul class="pricing-table-features list-reset text-sm">
+
+                                            <li>
+                                                <span>**Bajo Costo:** Componentes de hardware libre (ESP32) para un precio accesible.</span>                                             </li>
+
+                                            <li>
+                                                <span>**Mercado Objetivo:** Hogares inteligentes, pequeños negocios, apartamentos de alquiler (Airbnb).</span>
+                                            </li>
+
+                                            <li>
+                                                <span>**Escalabilidad:** Diseño modular para futuras integraciones sin comprometer la privacidad local.</span>
+                                            </li>
+
+                                            <li>
+                                                <span>**Competencia:** Superior en privacidad frente a soluciones comerciales propietarias.</span>                                             </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="pricing-table-cta mb-8">
+                                        <a class="button button-primary button-shadow button-block" href="#cta-section">Ver Opciones de Compra</a>                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="cta section" id="cta-section">
+
+                <div class="container">
+
+                    <div class="cta-inner section-inner">
+
+                        <h3 class="section-title mt-0">El Futuro de la Seguridad Comienza Aquí</h3>
+
+                        <p class="section-paragraph mb-0">¿Listo para llevar la seguridad de tu hogar al futuro biométrico? Descarga el Manual de Usuario.
+                            <div class="cta-cta">
+                                <a class="button button-primary" href="https://drive.google.com/file/d/1EdVHEo1oTM0pOpAbMDg0jCZipCyyeGFO/view?usp=sharing">Descargar Manual de Usuario</a>
+                            </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+
+        <footer class="site-footer">
+
+            <div class="container">
+
+                <div class="site-footer-inner">
+
+                    <div class="footer-copyright">&copy; 2025 ONYX. Todos los derechos reservados.</div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="dist/js/main.min.js"></script>
+</body>
+
+</html>

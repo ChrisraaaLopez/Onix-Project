@@ -1,0 +1,410 @@
+html {
+    line-height: 1.15;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+
+figcaption,
+figure,
+main {
+    display: block;
+}
+
+figure {
+    margin: 1em 40px;
+}
+
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+}
+
+pre {
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
+
+a {
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+
+abbr[title] {
+    border-bottom: none;
+    text-decoration: underline;
+    text-decoration: underline dotted;
+}
+
+b,
+strong {
+    font-weight: inherit;
+}
+
+b,
+strong {
+    font-weight: bolder;
+}
+
+code,
+kbd,
+samp {
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
+
+dfn {
+    font-style: italic;
+}
+
+mark {
+    background-color: #ff0;
+    color: #000;
+}
+
+small {
+    font-size: 80%;
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+sup {
+    top: -0.5em;
+}
+
+audio,
+video {
+    display: inline-block;
+}
+
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+img {
+    border-style: none;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: sans-serif;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+
+button,
+input {
+    overflow: visible;
+}
+
+button,
+select {
+    text-transform: none;
+}
+
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText;
+}
+
+fieldset {
+    padding: 0.35em 0.75em 0.625em;
+}
+
+legend {
+    box-sizing: border-box;
+    color: inherit;
+    display: table;
+    max-width: 100%;
+    padding: 0;
+    white-space: normal;
+}
+
+progress {
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+textarea {
+    overflow: auto;
+}
+
+[type="checkbox"],
+[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+[type="search"] {
+    -webkit-appearance: textfield;
+    outline-offset: -2px;
+}
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit;
+}
+
+details,
+menu {
+    display: block;
+}
+
+summary {
+    display: list-item;
+}
+
+canvas {
+    display: inline-block;
+}
+
+template {
+    display: none;
+}
+
+[hidden] {
+    display: none;
+}
+
+.footer-copyright {
+    text-align: center;
+}
+
+
+/* Esto asegura que todos los elementos dentro del CTA (el formulario y el enlace) se centren */
+
+.cta-inner {
+    text-align: center;
+    /* Centra el texto y los elementos inline-block */
+}
+
+
+/* Reglas para alinear el campo de texto y el botón de 'Únete' */
+
+.cta-cta form {
+    /* Establece el contenedor del formulario como un flexbox para alinear elementos */
+    display: flex;
+    /* Centra el formulario en la página */
+    justify-content: center;
+    /* Mantiene los elementos en una línea hasta que se rompa por tamaño */
+    flex-wrap: wrap;
+    /* Eliminar el margen superior si es demasiado grande */
+    margin-top: 24px;
+}
+
+
+/* Estilo para el campo de entrada (email) */
+
+.cta-cta form input.form-input {
+    /* Definir un ancho fijo o máximo para desktop */
+    max-width: 300px;
+    /* Asegurar que se muestre en línea con el botón */
+    display: inline-block;
+    /* Agregar un margen a la derecha para separarlo del botón */
+    margin-right: 10px;
+    /* Arreglar el espaciado en móviles */
+    margin-bottom: 10px;
+}
+
+
+/* Ajuste para que el campo de texto y el botón de 'Únete' se apilen en pantallas pequeñas */
+
+@media (max-width: 600px) {
+    .cta-cta form {
+        flex-direction: column;
+        /* Apilar en vertical en móviles */
+    }
+    .cta-cta form input.form-input {
+        margin-right: 0;
+        /* Eliminar margen derecho en móvil */
+    }
+}
+
+.cta-cta a.button-secondary {
+    /* Ajusta el espaciado superior si es necesario */
+    /* Limita su ancho si se ve demasiado ancho en desktop */
+    max-width: 300px;
+    /* Asegura que se centre debajo del formulario */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container {
+    padding-left: 10px;
+}
+
+
+/* ------------------------------------------------------------------
+ * SOLUCIÓN DE ALINEACIÓN HORIZONTAL PARA EL FORMULARIO
+ * ------------------------------------------------------------------ */
+
+.cta-inner {
+    text-align: center;
+    gap: 10px;
+    /* Asegura el centrado de todo el bloque */
+}
+
+.subscribe-form {
+    /* **CLAVE:** Habilita el control Flexbox horizontal */
+    display: flex;
+    /* **CLAVE:** Centra el grupo de input y botón */
+    justify-content: center;
+    max-width: 600px;
+    /* Limita el ancho del formulario en pantallas grandes */
+    margin: auto 0;
+    /* Centra el formulario en la página */
+}
+
+
+/* ------------------------------------------------------------------
+ * SOLUCIÓN PARA LOS ELEMENTOS INDIVIDUALES
+ * ------------------------------------------------------------------ */
+
+.subscribe-form .form-input {
+    /* **CLAVE:** El input se expande, pero tiene un límite */
+    flex-grow: 1;
+    max-width: 300px;
+    /* Le damos un ancho máximo */
+    margin-right: 10px;
+    /* Separación horizontal del botón */
+}
+
+.subscribe-form .button-primary {
+    /* El botón no debe expandirse, solo ocupar el espacio de su texto */
+    flex-shrink: 0;
+}
+
+
+/* ------------------------------------------------------------------
+ * SOLUCIÓN PARA MÓVILES (Media Query)
+ * ------------------------------------------------------------------ */
+
+@media (max-width: 640px) {
+    .subscribe-form {
+        flex-direction: column;
+        /* Apila verticalmente */
+        align-items: center;
+    }
+    .subscribe-form .form-input {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+        /* Espacio entre input y el botón de abajo */
+    }
+}
+
+.subscribe-form {
+    display: flex !important;
+    justify-content: center !important;
+    /* ... otras propiedades ... */
+}
+
+
+/* ------------------------------------------------------------------
+ * SOLUCIÓN DE ANCHO UNIFORME Y ESPACIADO EN CTA FINAL
+ * ------------------------------------------------------------------ */
+
+
+/* 1. Contenedor de Formulario: Necesario para centrar los elementos de ancho fijo */
+
+.subscribe-form {
+    /* Mantenemos el Flexbox para que se puedan alinear el input y el botón en línea */
+    display: flex;
+    justify-content: center;
+    /* Le damos un ancho máximo explícito para que todos los elementos lo compartan */
+    max-width: 300px;
+    /* Definimos el ancho máximo para la columna de elementos */
+    width: 100%;
+    margin: 24px auto 0;
+    /* Centra el formulario completo en la pantalla */
+}
+
+
+/* 2. Campo de Entrada y Botón Principal: Ajuste de Ancho */
+
+.subscribe-form .form-input,
+.subscribe-form .button-primary {
+    /* Forzamos que tanto el input como el botón principal ocupen el 100% del ancho del contenedor .subscribe-form */
+    width: 100%;
+    flex-grow: 1;
+    /* Permitimos que crezcan para ocupar el 100% */
+}
+
+
+/* 3. Botón Secundario: Mismo Ancho y Separación */
+
+.cta-cta .button-secondary {
+    display: block;
+    /* El botón secundario debe tener el mismo ancho máximo que el contenedor .subscribe-form */
+    max-width: 300px;
+    width: 100%;
+    /* Separación vertical: 10px entre el botón primario y el secundario */
+    margin: 10px auto 0;
+}
